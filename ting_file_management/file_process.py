@@ -7,7 +7,7 @@ def process(path_file, instance):
         if instance.search(i)['nome_do_arquivo'] == path_file:
             return
 
-    lines =  txt_importer(path_file)
+    lines = txt_importer(path_file)
     result = {
         'nome_do_arquivo': path_file,
         'qtd_linhas': len(lines),
@@ -22,7 +22,7 @@ def remove(instance):
     if len(instance) <= 0:
         print('Não há elementos')
         return
-    
+
     removed = instance.dequeue()
     print(f'Arquivo {removed["nome_do_arquivo"]} removido com sucesso\n')
 
